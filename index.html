@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login and registration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="hero">
+    <div class="form-box">
+      <div class="button-box">
+        <div id="btn"></div>
+        <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+        <button type="button" class="toggle-btn" onclick="signup()">Sign Up</button>
+      </div>
+      <div class="social-icons">
+        <img src="./images/icons8-google-64.png" alt="google">
+        <img src="./images/icons8-github-64.png" alt="github">
+        <img src="./images/icons8-instagram-64.png" alt="instagram">
+        <img src="./images/icons8-linkedin-64.png" alt="linkedin">
+        <img src="./images/icons8-telegram-app-64.png" alt="Telegram">
+        <img src="./images/icons8-twitter-circled-64.png" alt="twitter">
+      </div>
+      <form id="login" class="input-group">
+        <input type="text" class="input-field" placeholder="User Id" required>
+        <input type="text" class="input-field" placeholder="Enter password" required>
+        <input type="checkbox" class="check-box"> <span>Remember password</span>
+        <button type="submit" class="submit-btn">Log in</button>
+      </form>
+      <form id="signup" class="input-group">
+        <input type="text" class="input-field" placeholder="First name" required>
+        <input type="text" class="input-field" placeholder="Last name" required>
+        <input type="text" class="input-field" placeholder="Phone number" required>
+        <input type="text" class="input-field" placeholder="Email" required>
+        <label class="radio-inline">
+          <input type="radio" checked>male
+        </label>
+        <label class="radio-inline">
+          <input type="radio">female
+        </label>
+        <label class="radio-inline">
+          <input type="radio" class="radio">others
+        </label>
+        <input type="date" id="birthday" class="input-field" name="birthday">
+        <label for="favcolor" class="input-field">Select your favorite color: <input type="color" id="favcolor"
+            name="favcolor" value="#9f0650"></label>
+        <br>
+        <input type="checkbox" class="check-box"> <span>I agree to term and conditions</span>
+        <button type="submit" class="submit-btn">Sign up</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    var u = document.getElementById('login');
+    var f = document.getElementById('signup')
+    var s = document.getElementById('btn')
+
+    function signup() {
+      u.style.left = '-400px';
+      f.style.left = '50px'
+      s.style.left = '110px'
+    }
+
+    function login() {
+      u.style.left = '50px';
+      f.style.left = '450px'
+      s.style.left = '0px'
+    }
+  </script>
+</body>
+
+</html>
